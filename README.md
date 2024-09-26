@@ -13,7 +13,7 @@ Installation de WiringPi, pour pouvoir utiliser les GPIOs. Attention, le paquet 
 wget https://github.com/WiringPi/WiringPi/releases/download/3.10/wiringpi_3.10_arm64.deb
 sudo apt install ./wiringpi_3.10_arm64.deb
 ```
-
+Il faut aussi activer les ports SPI via l'utilitaire ```sudo raspi-config```: ```3 Interface Options```et ```I4 SPI```.
 
 # Utilisation
 
@@ -24,7 +24,7 @@ cd dragino_lora_app
 make
 ```
 
-L'exécutable compilé est alors disponible dans le dossier courant.
+L'exécutable compilé est alors disponible dans le dossier courant. Il doit être lancé en tant que super-utilisateur pour permettre l'accès au matériel (notamment les ports SPI qui communiquent avec le shield).
 
 # Source
 
